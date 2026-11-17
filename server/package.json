@@ -5,8 +5,11 @@
   "scripts": {
     "dev": "node --watch src/server.js",
     "start": "node src/server.js",
-    "db:reset": "DB_RESET=true node src/server.js",
-    "lint": "oxlint src"
+    "db:reset": "node src/server.js --reset",
+    "lint": "oxlint src",
+    "tunnel:start": "../tunnel.sh start",
+    "tunnel:stop": "../tunnel.sh stop",
+    "tunnel:status": "../tunnel.sh status"
   },
   "type": "module",
   "dependencies": {

@@ -1,0 +1,13 @@
+{
+  "name": "inventory-management-assesment",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "tunnel": "./tunnel.sh start",
+    "tunnel:stop": "./tunnel.sh stop",
+    "tunnel:status": "./tunnel.sh status",
+    "tunnel:restart": "./tunnel.sh restart",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev"
+  }
+}

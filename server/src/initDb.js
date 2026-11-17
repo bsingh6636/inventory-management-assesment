@@ -10,7 +10,7 @@ export async function initDb() {
   const conn = await mysql.createConnection({ ...config, multipleStatements: true });
 
   try {
-    if (process.env.DB_RESET === 'true') {
+    if (process.env.DB_RESET === 'true' || process.argv.includes('--reset')) {
       await conn.query(`DROP DATABASE IF EXISTS \`${database}\``);
       console.log(`Dropped database '${database}'`);
     }
